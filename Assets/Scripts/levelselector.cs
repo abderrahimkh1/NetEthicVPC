@@ -19,6 +19,8 @@ public class levelselector : MonoBehaviour
         if (selectedPanelIndex >= 0 && selectedPanelIndex < sceneNames.Length)
         {
             SceneManager.LoadScene(sceneNames[selectedPanelIndex]);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
