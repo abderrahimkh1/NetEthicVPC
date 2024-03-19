@@ -7,35 +7,35 @@ public class QuestManager : MonoBehaviour
 
     private bool questActive = false;
     private bool questCompleted = false; // Added variable to track quest completion status
-
+    public GameObject dialoguetest;
     // Method to accept the quest
     public void AcceptQuest()
     {
         questActive = true;
         questCompleted = false; // Reset quest completion status when accepting the quest
-        SpawnBackpack();
+        EnableBackpack();
     }
 
-    // Method to spawn the backpack
-    void SpawnBackpack()
+    // Method to enable the backpack
+    void EnableBackpack()
     {
-        Instantiate(backpackPrefab, backpackSpawnPoint.position, Quaternion.identity);
+        backpackPrefab.SetActive(true);
+        backpackPrefab.transform.position = backpackSpawnPoint.position;
     }
 
     // Method to handle player interaction with the backpack
-   public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Player interacted with the backpack!");
         if (other.CompareTag("Player") && questActive && !questCompleted)
         {
-            
-            Destroy(other.gameObject); // Destroy the backpack
+            // Perform interaction logic
             CompleteQuest(); // Complete the quest
         }
     }
 
     // Method to complete the quest
-    void CompleteQuest()
+    public void CompleteQuest()
     {
         questActive = false;
         questCompleted = true; // Mark the quest as completed
@@ -46,5 +46,9 @@ public class QuestManager : MonoBehaviour
     public bool IsQuestCompleted()
     {
         return questCompleted;
+    }
+    public bool IsQuestActive()
+    {
+        return questActive;
     }
 }

@@ -158,9 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab15c44bf0ad94489badeebb1428c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backpackPrefab: {fileID: 1323971688253073122, guid: fc6e5b08480a8024d80c6ddddf540fd8,
-    type: 3}
+  backpackPrefab: {fileID: 1287385755}
   backpackSpawnPoint: {fileID: 1402412415}
+  dialoguetest: {fileID: 1355242506}
 --- !u!4 &275972509
 Transform:
   m_ObjectHideFlags: 0
@@ -188,6 +188,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 974238578668270714, guid: c708a3b79cd542b42bbfedb17e213bc1,
+        type: 3}
+      propertyPath: m_SlopeLimit
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 974238578668270714, guid: c708a3b79cd542b42bbfedb17e213bc1,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2119775930974504096, guid: c708a3b79cd542b42bbfedb17e213bc1,
         type: 3}
@@ -593,6 +603,7 @@ GameObject:
   - component: {fileID: 832031944}
   - component: {fileID: 832031943}
   - component: {fileID: 832031945}
+  - component: {fileID: 832031946}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -865,6 +876,31 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
+--- !u!114 &832031946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832031933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 12
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!1 &1287385755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1323971688253073122, guid: fc6e5b08480a8024d80c6ddddf540fd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6387785710838275892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1355242506
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,17 +931,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 11
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":100.200012,"yPos":-30.1999817},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"aider","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":345.199951,"yPos":-30.1999817},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"ne
-    pas aider","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":441.8,"yPos":183.799988},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"bye
-    !","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":96.8,"yPos":181.799988},"ID":7,"ParamActions":[{"__type":"EditableSetBoolParamAction:#DialogueEditor","ParameterName":"quest","Value":true}],"TMPFontGUID":null,"Text":"allez
-    !","parentUIDs":[5],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":453.8,"yPos":-139.199982},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"allez
-    , on doit retrouver mon backpack","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"quest","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":false}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":true}],"NodeUID":10},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":false}],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":211.000031,"yPos":-153.999985},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"bonjour,
+  CurrentIDCounter: 13
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":63.1999664,"yPos":145.799988},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"aider","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":308.199921,"yPos":145.799988},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"ne
+    pas aider","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":404.799957,"yPos":359.8},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"bye
+    !","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":59.7999573,"yPos":357.8},"ID":7,"ParamActions":[{"__type":"EditableSetBoolParamAction:#DialogueEditor","ParameterName":"quest","Value":true}],"TMPFontGUID":null,"Text":"allez
+    !","parentUIDs":[5],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":416.799957,"yPos":36.8000031},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"allez
+    , on doit retrouver mon backpack","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":318.199982,"yPos":-103.199966},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Merci!","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"quest","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"completedQuest","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":true}],"NodeUID":10},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":false}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"quest","CheckType":0,"RequiredValue":false}],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"completedQuest","CheckType":0,"RequiredValue":true}],"NodeUID":12}],"EditorInfo":{"isRoot":true,"xPos":174.000031,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"bonjour,
     j''ai besoin d''aide , les harceleurs m''attaque pour mon apparence physique
-    ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":418.199951,"yPos":65.8},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"dommage
-    je vais changer d''ecole :''(","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":93.20001,"yPos":59.8000031},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Merci
-    pour votre choix , on doit trouver les harceleurs qui on pritmon backpack","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":92.8,"yPos":293.8},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"retrouve
-    moi mon backpack","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-50.1999969,"yPos":-170.199982},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"retrouve
+    ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":381.199921,"yPos":241.800018},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"dommage
+    je vais changer d''ecole :''(","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":56.1999664,"yPos":235.800018},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Merci
+    pour votre choix , on doit trouver les harceleurs qui on pritmon backpack","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":55.7999573,"yPos":469.8},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"retrouve
+    moi mon backpack","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-87.20004,"yPos":5.800003},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"retrouve
     moi mon backpack","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"sarrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -922,23 +958,12 @@ MonoBehaviour:
   - {fileID: 832031944}
   - {fileID: 832031943}
   - {fileID: 832031945}
+  - {fileID: 832031946}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 275972508}
-        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1355242508
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,6 +1145,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6387785710838275892}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402412418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287385755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954b8d2d338e47f4abda0821e7bad5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1405745515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: def49b8251171a341a5aa481b8aa1182,
+        type: 3}
+      propertyPath: m_Name
+      value: Environnement
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: def49b8251171a341a5aa481b8aa1182, type: 3}
 --- !u!1001 &1449279649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1880,7 +1985,7 @@ PrefabInstance:
     - target: {fileID: 1807176624812063832, guid: fc6e5b08480a8024d80c6ddddf540fd8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.37
+      value: 32.81
       objectReference: {fileID: 0}
     - target: {fileID: 1807176624812063832, guid: fc6e5b08480a8024d80c6ddddf540fd8,
         type: 3}
@@ -1925,7 +2030,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1323971688253073122, guid: fc6e5b08480a8024d80c6ddddf540fd8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402412418}
   m_SourcePrefab: {fileID: 100100000, guid: fc6e5b08480a8024d80c6ddddf540fd8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1940,3 +2049,4 @@ SceneRoots:
   - {fileID: 275972509}
   - {fileID: 6387785710838275892}
   - {fileID: 1736583800}
+  - {fileID: 1405745515}
