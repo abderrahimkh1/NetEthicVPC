@@ -6,6 +6,8 @@ public class startconvo : MonoBehaviour
 {
     [SerializeField] private NPCConversation myConv;
     [SerializeField] public bool Quest;
+    public QuestManager QuestManager;
+    public bool questcompleted;
 
     private bool inRange = false;
 
@@ -31,8 +33,17 @@ public class startconvo : MonoBehaviour
     {
         if (inRange && Input.GetKeyUp(KeyCode.E))
         {
+            if (QuestManager != null)
+            {
+                questcompleted = QuestManager.questCompleted; //on dialogue start yekhou value 
+            }
+            else
+            {
+                Debug.LogWarning("QuestManager reference is not set.");
+            }
             ConversationManager.Instance.StartConversation(myConv);
             ConversationManager.Instance.SetBool("quest", Quest);
+            ConversationManager.Instance.SetBool("completedQuest", questcompleted);
         }
     }
 }

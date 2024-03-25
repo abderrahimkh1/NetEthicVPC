@@ -1,4 +1,5 @@
 using UnityEngine;
+using DialogueEditor;
 
 public class QuestManager : MonoBehaviour
 {
@@ -6,8 +7,9 @@ public class QuestManager : MonoBehaviour
     public Transform backpackSpawnPoint;
 
     private bool questActive = false;
-    private bool questCompleted = false; // Added variable to track quest completion status
-    public GameObject dialoguetest;
+    public bool questCompleted = false; // Added variable to track quest completion status
+    public NPCConversation dialoguetest;
+
     // Method to accept the quest
     public void AcceptQuest()
     {
@@ -40,6 +42,8 @@ public class QuestManager : MonoBehaviour
         questActive = false;
         questCompleted = true; // Mark the quest as completed
         // Display completion message or trigger other events
+       // ConversationManager.Instance.SetBool("completedQuest", true);
+
     }
 
     // Method to check if the quest is completed
