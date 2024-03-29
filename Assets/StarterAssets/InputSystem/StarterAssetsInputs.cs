@@ -43,10 +43,11 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+        
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
