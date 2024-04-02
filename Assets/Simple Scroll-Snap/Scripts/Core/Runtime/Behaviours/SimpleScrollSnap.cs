@@ -339,6 +339,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
 
         private void Setup()
         {
+            Debug.Log("scrollsnapsetup");
             if (NumberOfPanels == 0) return;
 
             // Scroll-Rect

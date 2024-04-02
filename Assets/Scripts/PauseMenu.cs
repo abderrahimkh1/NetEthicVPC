@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Ensure the pause menu is disabled when the game starts
         pauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -46,6 +47,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene"); 
     }
 }

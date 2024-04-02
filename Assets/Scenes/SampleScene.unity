@@ -3074,7 +3074,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1365494207}
+      - m_Target: {fileID: 1979073285}
         m_TargetAssemblyTypeName: VolumeControl, Assembly-CSharp
         m_MethodName: UpdateVolume
         m_Mode: 1
@@ -4459,7 +4459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 129166, guid: f6aff8828d7b4e34880e8973b580ff18, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11412794, guid: f6aff8828d7b4e34880e8973b580ff18, type: 3}
       propertyPath: m_Text
@@ -4740,7 +4740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 195836, guid: 568207d0781d8d24890588312b92a08d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22495484, guid: 568207d0781d8d24890588312b92a08d, type: 3}
       propertyPath: m_Pivot.x
@@ -4825,7 +4825,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 195836, guid: 568207d0781d8d24890588312b92a08d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979073285}
   m_SourcePrefab: {fileID: 100100000, guid: 568207d0781d8d24890588312b92a08d, type: 3}
 --- !u!1 &1496393687
 GameObject:
@@ -6498,7 +6502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 116998, guid: 5f8178a58d97f7b428f4aebd94804b43, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 419134, guid: 5f8178a58d97f7b428f4aebd94804b43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6557,6 +6561,32 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1365494207}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8178a58d97f7b428f4aebd94804b43, type: 3}
+--- !u!1 &1979073280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195836, guid: 568207d0781d8d24890588312b92a08d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434264419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1979073281 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8219966, guid: 568207d0781d8d24890588312b92a08d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434264419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979073285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979073280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189a36f031976f8489e0d93c15184a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 840897072}
+  audioSource: {fileID: 1979073281}
 --- !u!1 &2013558551
 GameObject:
   m_ObjectHideFlags: 0
