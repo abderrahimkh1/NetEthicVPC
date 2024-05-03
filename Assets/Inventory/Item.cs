@@ -10,9 +10,10 @@ public class Item : ScriptableObject
     public Sprite icon;
     public GameObject prefab;
     public string prefabTag;
+    public int price;
 
     // Constructor with parameters
-    public Item(int id, string itemName, int value, Sprite icon, GameObject prefab)
+    public Item(int id, string itemName, int value, Sprite icon,int price, GameObject prefab)
     {
         this.id = id;
         this.itemName = itemName;
@@ -20,6 +21,7 @@ public class Item : ScriptableObject
         this.icon = icon;
         this.prefab = prefab;
         this.prefabTag = prefabTag; // Assign the prefab tag
+        this.price = price;
     }
 
     // Constructor without parameters (default constructor)
@@ -32,5 +34,6 @@ public class Item : ScriptableObject
         icon = null;
         prefab = null;
         prefabTag = ""; // Initialize the prefab tag
+        price = 0;
     }
 }
