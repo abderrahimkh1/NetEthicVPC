@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI; // Add this to handle UI elements
 
 public class ButtonShooter : MonoBehaviour
 {
@@ -7,24 +9,43 @@ public class ButtonShooter : MonoBehaviour
     public float shootInterval = 1f; // Time interval between each button shoot
     public float shootSpeed = 5f; // Speed of button movement
     public float countdownDuration = 30f; // Duration for the button shooting
+    [SerializeField] public TextMeshProUGUI countdownText; // Countdown display
+    [SerializeField] public Button startButton; // Start button
+    [SerializeField] public Button replayButton; // Replay button
 
     private float nextShootTime; // Time when the next button shoot will occur
     private float countdownTimer; // Countdown timer
+    private bool isGameRunning = false; // Flag to track game state
 
     void Start()
     {
-        nextShootTime = Time.time + shootInterval; // Initialize next shoot time
-        countdownTimer = countdownDuration; // Initialize countdown timer
+        // Initialize buttons and their listeners
+        startButton.onClick.AddListener(StartGame);
+        replayButton.onClick.AddListener(ResetGame);
+
+        // Initially hide the replay button
+        replayButton.gameObject.SetActive(false);
+
+        // Initialize next shoot time
+        nextShootTime = Time.time + shootInterval;
+        countdownTimer = countdownDuration;
+
+        // Show the start button
+        startButton.gameObject.SetActive(true);
     }
 
     void Update()
     {
+        if (!isGameRunning) return;
+
         // Update the countdown timer
         countdownTimer -= Time.deltaTime;
+        UpdateCountdownText();
 
         // Check if the countdown timer has ended
         if (countdownTimer <= 0)
         {
+            EndGame();
             return; // Stop shooting buttons when the countdown ends
         }
 
@@ -67,5 +88,39 @@ public class ButtonShooter : MonoBehaviour
         Vector3 spawnPosition = new Vector3(x, y, 0f);
 
         return spawnPosition;
+    }
+
+    void UpdateCountdownText()
+    {
+        if (countdownText != null)
+        {
+            countdownText.text = "Time Left: " + Mathf.Max(0, Mathf.FloorToInt(countdownTimer)).ToString() + "s";
+        }
+    }
+
+    public void StartGame()
+    {
+        isGameRunning = true;
+        countdownTimer = countdownDuration;
+        startButton.gameObject.SetActive(false);
+        replayButton.gameObject.SetActive(false);
+    }
+
+    void EndGame()
+    {
+        isGameRunning = false;
+        replayButton.gameObject.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        // Destroy all remaining buttons
+       // foreach (Transform child in uiPanel)
+        //{
+         //   Destroy(child.gameObject);
+        //}
+
+        // Restart the game
+        StartGame();
     }
 }
