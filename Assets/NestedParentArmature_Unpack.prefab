@@ -2025,6 +2025,7 @@ MonoBehaviour:
   pickUpLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  questManager: {fileID: 0}
 --- !u!54 &4240155710683064844
 Rigidbody:
   m_ObjectHideFlags: 0
